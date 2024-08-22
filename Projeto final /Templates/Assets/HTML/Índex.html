@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename ='css/index.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'images/logo1.png')}}" type="image/x-icon">
+    <script>
+        // variável que vai conter a rota para login.
+        var loginUrl = "{{url_for('login')}}"; 
+    </script>
+</head>
+<body>
+
+    <div class="caixa">
+        <img src="{{url_for('static', filename ='images/logo1.png')}}" alt="" width="230px">
+    </div>
+
+    <aside class="sidebar border">
+        <header class="sidebar-header"> 
+            <img class="logo-img" src="{{url_for('static', filename = 'images/avatar.png')}}" alt="foto do usuario">
+        </header>
+
+        <nav>
+            <h1 class="login" id="logado"></h1>
+            <button>
+                <span>
+                    <i class="material-symbols-outlined">Home</i>
+                    <span>
+                        <a href="{{url_for('index')}}" target="_self">Home</a>
+                    </span>
+                </span>
+            </button>
+
+            <button>
+                <span>
+                    <i class="material-symbols-outlined">add_box</i>
+                    <span>
+                        <a href="{{url_for('inserir')}}">Inserir</a>
+                    </span>
+                </span>
+            </button>
+
+            <button>
+                <span>
+                    <i class="material-symbols-outlined">Refresh</i>
+                    <span>
+                        <a href="{{url_for('atualizar')}}">Atualizar</a>
+                    </span>
+                </span>
+            </button>
+
+            <button>
+                <span>
+                    <i class="material-symbols-outlined">Delete</i>
+                    <span>
+                        <a href="{{url_for('deletar')}}">Deletar</a>
+                    </span>
+                </span>
+            </button>
+
+            <button>
+                <span>
+                    <i class="material-symbols-outlined">search</i>
+                    <span>
+                        <a href="{{url_for('consulta')}}">Pesquisar</a>
+                    </span>
+                </span>
+            </button>
+
+            <div>
+                <span>
+                    <button onclick="sair()">Sair</button>
+                </span>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <h2>ADS ADVOCACIAS</h2>
+        <article>
+            <div>
+                <ul>
+                    <li>
+                        <h3>Objetivo</h3>
+                        <p>
+                            Nossa empresa, ADS Advocacias, tem como missão proporcionar às pessoas um acesso facilitado e eficiente às informações sobre seus processos jurídicos. Compreendemos que o universo jurídico pode ser complexo e, muitas vezes, confuso para aqueles que não têm familiaridade com seus trâmites e terminologias. Por isso, desenvolvemos uma plataforma intuitiva e acessível que permite a consulta de processos utilizando apenas o CPF.
+                        </p> 
+                        <p>
+                            Além de oferecer uma ferramenta de busca poderosa e precisa, nossa plataforma também disponibiliza suporte para esclarecer dúvidas e fornecer orientações sobre como interpretar os dados encontrados. Acreditamos que a transparência e a facilidade de acesso são fundamentais para fortalecer a confiança no sistema jurídico. Estamos comprometidos em inovar continuamente, trazendo novas funcionalidades e melhorias para assegurar que nossos serviços atendam às necessidades e expectativas dos nossos usuários.
+                        </p>
+                        <p>
+                            Em ADS Advocacias, valorizamos a segurança e a privacidade dos dados pessoais. Utilizamos tecnologias avançadas de criptografia e proteção de dados para garantir que todas as informações dos usuários estejam seguras e sejam tratadas com a máxima confidencialidade. Nosso compromisso é ser uma ponte entre o público e o complexo sistema jurídico, promovendo uma experiência de uso eficiente, segura e esclarecedora. Acreditamos que todos têm o direito de entender e acompanhar seus processos judiciais de maneira simples e prática.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <script src="{{url_for('static', filename = 'js/index.js')}}"></script>
+</body>
+</html>
