@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo1.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signin.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="caixa">
+        <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="" width="230px">
+    </div>
+
+    <div class="container">
+        <div class="card">
+          <h1>Entrar</h1>
+          
+          <form action="{{ url_for('login') }}" method="post">
+            <div id="msgError"></div>
+    
+            <div class="label-float">
+              <input type="text" id="usuario" name="cpf" placeholder="" required />
+              <label id="userLabel" for="usuario">CPF</label>
+            </div>
+    
+            <div class="label-float">
+              <input type="password" id="senha" name="senha" placeholder="" required />
+              <label id="senhaLabel" for="senha">Senha</label>
+              <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+    
+            <div class="justify-center">
+              <button type="submit">Entrar</button>
+            </div>
+          </form>
+
+          <div class="justify-center">
+            <hr />
+          </div>
+          
+          <p>
+            Não tem uma conta?
+            <a href="{{ url_for('cadastro') }}">
+              Cadastre-se
+            </a>
+          </p>
+        </div>
+      </div>
+     
+      <script src="{{ url_for('static', filename='js/signin.js') }}"></script>
+    </body>
+</html>
