@@ -1,0 +1,31 @@
+.alert-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.alert {
+    margin: 0;
+}
+
+.alert-container2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px;
+}
+
+.alert {
+    margin: 0;
+}
