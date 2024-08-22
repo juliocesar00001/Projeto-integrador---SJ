@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url("../images/fundotela1.jpg");
+    color: #fff;
+  }
+  
+  .caixa {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .caixa img {
+    width: 230px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    background-color: #242424;
+    padding: 40px 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #2f3336;
+    transition: all 0.35s;
+  }
+  
+  .sidebar-header {
+    width: 50px;
+    margin-bottom: 16px;
+  }
+  
+  .logo-img {
+    width: 38px;
+    min-height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    margin-right: 30px;
+  }
+  
+  .logo-img:hover {
+    transform: scale(1.5);
+  }
+  
+  .sidebar nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .sidebar button {
+    height: 60px;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar button > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+    transition: all 0.2s;
+  }
+  
+  .sidebar button:hover > span {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .sidebar button > i {
+    position: relative;
+    font-size: 37px;
+    transition: 0.2s;
+    color: #fff;
+  }
+  
+  .sidebar button span {
+    font-size: 16px;
+  }
+  
+  .sidebar button span > a {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .main-content {
+    margin-left: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .container,
+  .container2 {
+    flex: 1 1 45%;
+    max-width: 400px;
+    min-width: 250px;
+    margin: 20px;
+  }
+  
+  .card,
+  .card2 {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .label-float {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .label-float input {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .label-float input:focus {
+    border-bottom-color: #4038a0;
+  }
+  
+  .label-float label {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: bottom 0.3s ease, font-size 0.3s ease;
+  }
+  
+  .label-float input:focus + label,
+  .label-float input:not(:placeholder-shown) + label {
+    bottom: 30px;
+    font-size: 13px;
+    color: #4038a0;
+  }
+  
+  button {
+    background-color: #272262;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar button:hover {
+    background-color: transparent; /* fundo transparente ao passar o mouse */
+  }
+  
+  @media (max-width: 1024px) {
+    .main-content {
+        margin-left: 0;
+    }
+  
+    .container,
+    .container2 {
+        flex: 1 1 90%;
+    }
+  }
+  
+  /* Estilo adicional para os elementos fora da barra lateral */
+  
+  .main {
+    transition: margin 0.4s;
+    margin-left: 240px; /* ajuste de margem para o conteúdo principal */
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 45px; /* ajuste de margem inferior */
+  }
+  
+  .caixa {
+    margin-top: 45px;
+  }
+  
+  .caixa img {
+    width: 155px;
+    margin: auto;
+    display: block;
+    margin-right: 560px;
+  }
+  
+  h1 {
+    text-align: left;
+    margin-left: 11px;
+    margin-bottom: 15px;
+  }
+  
+  .main > div > ul > li > h2 {
+    margin: auto;
+    margin-right: 45px;
+    font-family: sans-serif;
+    margin-top: 60px;
+    text-align: justify;
+  }
+  
+  .main > div > ul > li > h3 {
+    margin: auto;
+    margin-right: 45px;
+    font-family: sans-serif;
+    margin-top: 60px;
+    text-align: justify;
+  }
+  
+  .main > div > ul > li > h4 {
+    margin: auto;
+    margin-right: 45px;
+    font-family: sans-serif;
+    margin-top: 60px;
+    text-align: justify;
+  }
+  
+  .main li {
+    text-align: center;
+    display: block;
+    margin-top: 90px;
+    margin-right: 50px;
+  }
+  
+  h2 {
+    color: #ffffff;
+    margin-left: 230px;
+  }
+  
+  .sidebar h3 {
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    text-align: left;
+    padding: 0;
+    margin-left: 13px;
+  }
+  
+  .sidebar div button {
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    text-align: left;
+    padding: 0;
+    margin-left: 13px;
+    margin-top: 10px;
+  }
+  
+  article div ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article div ul li {
+    background: rgb(87, 87, 87);
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 290px;
+  }
+  
+  p {
+    text-align: justify;
+    line-height: 1.6;
+    margin: 20px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
